@@ -4,13 +4,19 @@
     text-align: left;
     line-height: 35px;
     color: #888;
+    overflow: hidden;
 }
 
 .location-cont h1{
     margin: 0;
+    white-space: nowrap;
 }
 .weather-location-cont{
-    width: 400px;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 350px;
+    box-sizing: border-box;
     padding: 15px;
     font-family: "Roboto", sans-serif;
     box-shadow: 10px 10px 40px -12px rgba(0, 0, 0, 0.75);

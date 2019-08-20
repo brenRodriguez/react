@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { PropTypes } from "prop-types";
-import WeatherLocation from "./index";
+import WeatherLocation from "./WeatherLocation/index";
+import "./styles.css";
 
 export const LocationList = ({ cities, onSelectedLocation }) => {
     const handleWeatherLocationClick = city => {
-        console.log("handleWeatherLocationClick")
         onSelectedLocation(city)
     }
   const renderCities = cities => cities.map(city => 
@@ -12,7 +12,7 @@ export const LocationList = ({ cities, onSelectedLocation }) => {
         city={city} 
         key={city} 
         onWeatherLocationClick={() => handleWeatherLocationClick(city)} />);
-  return <div>{renderCities(cities)}</div>;
+  return <div className="location-list">{renderCities(cities)}</div>;
 };
 
 LocationList.propTypes = {
